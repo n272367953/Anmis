@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.anmis.anmis.activity.ClickEnentManager;
 import com.anmis.anmis.util.Utils;
 
 /**
@@ -34,6 +35,7 @@ public class MyRecyclerViewAdaptes extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ((Button)holder.itemView).setText(datas[position]);
+        ClickEnentManager.registerButton((Button)holder.itemView,position);
     }
 
     @Override

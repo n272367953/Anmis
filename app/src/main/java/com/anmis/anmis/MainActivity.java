@@ -11,6 +11,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.anmis.anmis.activity.ClickEnentManager;
 import com.anmis.anmis.adapter.MyRecyclerViewAdaptes;
 import com.anmis.anmis.util.DataTools;
 
@@ -23,12 +24,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RecyclerView recycleView;
     private int offset;
     private String[] buttonNames = {
-            "1", "2", "3",
+            "上下滑入滑出", "2", "3",
             "4", "5", "6",
             "7", "8", "9",
-            "10", "11", "13",
-            "14", "15", "16",
-            "17", "18", "19",
+            "10", "11", "12",
+            "13", "14", "15",
+            "16", "17", "18",
     };
 
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+        ClickEnentManager.init(this);
     }
 
     private void initView() {
