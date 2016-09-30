@@ -20,6 +20,15 @@
         <activity
             android:name="com.anmis.anmis.activity.UpDownOutInActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.anmis.anmis.activity.SelectedableTextViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.anmis.anmis.activity.ScrollerGradientActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.anmis.anmis.activity.PullToRefreshActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

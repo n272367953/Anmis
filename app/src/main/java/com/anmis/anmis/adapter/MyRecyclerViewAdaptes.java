@@ -35,6 +35,7 @@ public class MyRecyclerViewAdaptes extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ((Button)holder.itemView).setText(datas[position]);
+        ((Button)holder.itemView).setAllCaps(false);
         ClickEnentManager.registerButton((Button)holder.itemView,position);
     }
 

@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RecyclerView recycleView;
     private int offset;
     private String[] buttonNames = {
-            "上下滑入滑出", "2", "3",
-            "4", "5", "6",
+            "上下滑入滑出", "可选择复制的TextView", "可滑动渐变的header",
+            "下拉测试", "DataBinderTest", "6",
             "7", "8", "9",
             "10", "11", "12",
             "13", "14", "15",
@@ -53,10 +53,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int width = getApplication().getResources().getDisplayMetrics().widthPixels / 3;
         recycleView = (RecyclerView) findViewById(R.id.recyclerView);
 //        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,3);
-        GridLayoutManager layoutManager = new GridLayoutManager(this,3);
+        GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         layoutManager.setOrientation(GridLayoutManager.VERTICAL);
         recycleView.setLayoutManager(layoutManager);
-        RecyclerView.Adapter adapter = new MyRecyclerViewAdaptes(this,buttonNames);
+        RecyclerView.Adapter adapter = new MyRecyclerViewAdaptes(this, buttonNames);
         recycleView.setAdapter(adapter);
         offset = width;
         Bitmap bitmap = Bitmap.createBitmap(width, DataTools.dip2px(this, 5.0f), Bitmap.Config.ARGB_8888);
