@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.anmis.anmis.view.TextPage
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/write"
+        android:text="现在测试一下，发现长按没反应了，所料不错，就是getDefaultMovementMethod方法控制了ContextMenu。
+      看一下ArrowKeyMovementMethod的代码，里面提供了KeyEvent、轨迹球事件onTrackballEvent和touch事件onTouchEvent的处理。这些事件在何处调用的呢？我们看看TextView的onTouchEvent、onTrackballEvent和onKeyEvent方法里面就明白了，在这些事件回调中调用了ArrowKeyMovementMethod里面的这些方法。
+      还有个问题，ContextMenu在哪里触发的？这个问题，用过ContextMenu的都知道，view里面要使用ContextMenu，需要覆盖一个onCreateContextMenu方法，然后在里面创建ContextMenu的各个选项。在TextView里面找onCreateContextMenu，果然有，里面定义了选择、复制、粘贴等选项。
+      既然找到了这个，那么我们就可以进一步分析选择是如何做到的。
+      onCreateContextMenu只是创建菜单，那么菜单点击之后，触发了什么呢？onCreateContextMenu里面定义了一个MenuHandler对象，然后作为参数传递给setOnMenuItemClickListener，找到MenuHandler，发现里面的onMenuItemClick返回的是onTextContextMenuItem函数，找到onTextContextMenuItem，OMG，终于找到点击menu触发的函数了。但是里面貌似没有关键的东西，选择的部分不在这里。那么，就应该在上面所说的那些事件里面了。
+      重点分析ArrowKeyMovementMethod的onTouchEvent方法。发现一个重要的方法getLayout()，然后获取一个Layout对象，通过x和y坐标知道当前字符串的offset位置。
+      那么，问题就可以完美的解决了。你可以点击任何地方然后拖动，释放之后，中间的文字就会被选中，so beautiful！"
+        android:textColor="@color/black" />
+
+
+</LinearLayout>

@@ -12,4 +12,14 @@ public class ExampleUnitTest {
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    public void jian() {
+        assertEquals(2, 4 - 2);
+    }
+
+    @Test
+    public void cheng(){
+        assertEquals(9,3*3);
+    }
 }

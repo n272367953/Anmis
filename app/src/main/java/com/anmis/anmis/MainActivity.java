@@ -26,12 +26,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String[] buttonNames = {
             "上下滑入滑出", "可选择复制的TextView", "可滑动渐变的header",
             "下拉测试", "DataBinderTest", "PinnedHeaderExpandableListView",
-            "SurfaceViewTest", "8", "9",
-            "10", "11", "12",
+            "SurfaceViewTest", "RrtroFit Demo", "Rxjava",
+            "Fresco", "11", "12",
             "13", "14", "15",
             "16", "17", "18",
     };
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
