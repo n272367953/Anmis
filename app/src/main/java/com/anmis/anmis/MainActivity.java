@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             "上下滑入滑出", "可选择复制的TextView", "可滑动渐变的header",
             "下拉测试", "DataBinderTest", "PinnedHeaderExpandableListView",
             "SurfaceViewTest", "RrtroFit Demo", "Rxjava",
-            "Fresco", "11", "12",
+            "Fresco", "GreenDao Test", "12",
             "13", "14", "15",
             "16", "17", "18",
     };

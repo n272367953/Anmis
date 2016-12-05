@@ -49,6 +49,9 @@
         <activity
             android:name="com.anmis.anmis.activity.FrescoTestActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.anmis.anmis.activity.GreenDaoTestActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

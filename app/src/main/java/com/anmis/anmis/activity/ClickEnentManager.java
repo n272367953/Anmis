@@ -63,6 +63,7 @@ public class ClickEnentManager {
                         intent = getIntent(FrescoTestActivity.class);
                         break;
                     case 11:
+                        intent = getIntent(GreenDaoTestActivity.class);
                         break;
                     case 12:
                         break;

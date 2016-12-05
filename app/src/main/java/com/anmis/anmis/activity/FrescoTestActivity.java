@@ -13,7 +13,6 @@ import com.facebook.drawee.view.SimpleDraweeView;
 
 public class FrescoTestActivity extends Activity {
 
-
     private String imgUrl = "http://f.hiphotos.baidu.com/image/pic/item/203fb80e7bec54e753da379aba389b504fc26a7b.jpg";
 
     @Override

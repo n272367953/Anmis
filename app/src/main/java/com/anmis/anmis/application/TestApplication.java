@@ -2,6 +2,7 @@ package com.anmis.anmis.application;
 
 import android.app.Application;
 
+import com.anmis.adfaf.DaoMaster;
 import com.facebook.drawee.backends.pipeline.Fresco;
 
 /**
@@ -9,9 +10,17 @@ import com.facebook.drawee.backends.pipeline.Fresco;
  */
 
 public class TestApplication extends Application {
+
+    private static TestApplication app;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        app = this;
         Fresco.initialize(this);
+    }
+
+    public static TestApplication getInstance() {
+        return app;
     }
 }
